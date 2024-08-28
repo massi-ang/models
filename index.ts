@@ -1,18 +1,25 @@
 import type { LLMProviderType } from "../types";
 
-const AI_MODELS: Record<
-  string,
-  {
-    encoding: string;
-    prices: {
-      prompt: number;
-      completion: number;
-    };
-    maxTokens: number;
-    llm: LLMProviderType[];
-    order?: number;
-  }
-> = {
+export interface ModelType {
+  encoding: string;
+  prices: {
+    prompt: number;
+    completion: number;
+  };
+  maxTokens: number;
+  llm: LLMProviderType[];
+  order?: number;
+  inputOptions?: InputOptions;
+}
+
+export interface InputOptions {
+  images?: boolean;
+  audio?: boolean;
+  videos?: boolean;
+  text?: boolean;
+}
+
+const AI_MODELS: Record<string, ModelType> = {
   "gpt-4o": {
     encoding: "cl100k_base",
     prices: {
@@ -446,6 +453,7 @@ const AI_MODELS: Record<
     maxTokens: 2049,
     llm: ["Bedrock (Custom)"],
     order: -1,
+    inputOptions: { images: true, text: true },
   },
   "anthropic.claude-3-5-sonnet-20240620-v1:0": {
     encoding: "r50k_base",
@@ -456,6 +464,7 @@ const AI_MODELS: Record<
     maxTokens: 2049,
     llm: ["Bedrock (Custom)"],
     order: -1,
+    inputOptions: { images: true, text: true },
   },
   "cohere.command-text-v14": {
     encoding: "r50k_base",
