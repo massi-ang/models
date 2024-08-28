@@ -301,11 +301,10 @@ const AI_MODELS: Record<
     order: -1,
   },
 
-
   "gemini-1.5-flash": {
     encoding: "r50k_base",
     prices: {
-      prompt: 0.0070,
+      prompt: 0.007,
       completion: 0.0105,
     },
     maxTokens: 128000,
@@ -316,7 +315,7 @@ const AI_MODELS: Record<
   "gemini-1.5-pro": {
     encoding: "r50k_base",
     prices: {
-      prompt: 0.0070,
+      prompt: 0.007,
       completion: 0.0105,
     },
     maxTokens: 128000,
@@ -377,6 +376,186 @@ const AI_MODELS: Record<
     maxTokens: 2049,
     llm: ["MistralAI Chat (Langchain)"],
     // order: -1
+  },
+  "amazon.titan-tg1-large": {
+    encoding: "r50k_base",
+    prices: {
+      prompt: 0.0004,
+      completion: 0.0004,
+    },
+    maxTokens: 2049,
+    llm: ["Bedrock (Custom)"],
+    order: -1,
+  },
+  "amazon.titan-text-premier-v1:0": {
+    encoding: "r50k_base",
+    prices: {
+      prompt: 0.0004,
+      completion: 0.0004,
+    },
+    maxTokens: 2049,
+    llm: ["Bedrock (Custom)"],
+    order: -1,
+  },
+  "amazon.titan-text-lite-v1": {
+    encoding: "r50k_base",
+    prices: {
+      prompt: 0.0004,
+      completion: 0.0004,
+    },
+    maxTokens: 2049,
+    llm: ["Bedrock (Custom)"],
+    order: -1,
+  },
+  "amazon.titan-text-express-v1": {
+    encoding: "r50k_base",
+    prices: {
+      prompt: 0.0004,
+      completion: 0.0004,
+    },
+    maxTokens: 2049,
+    llm: ["Bedrock (Custom)"],
+    order: -1,
+  },
+  "ai21.jamba-instruct-v1:0": {
+    encoding: "r50k_base",
+    prices: {
+      prompt: 0.0004,
+      completion: 0.0004,
+    },
+    maxTokens: 2049,
+    llm: ["Bedrock (Custom)"],
+    order: -1,
+  },
+  "anthropic.claude-3-sonnet-20240229-v1:0": {
+    encoding: "r50k_base",
+    prices: {
+      prompt: 0.0004,
+      completion: 0.0004,
+    },
+    maxTokens: 2049,
+    llm: ["Bedrock (Custom)"],
+    order: -1,
+  },
+  "anthropic.claude-3-haiku-20240307-v1:0": {
+    encoding: "r50k_base",
+    prices: {
+      prompt: 0.0004,
+      completion: 0.0004,
+    },
+    maxTokens: 2049,
+    llm: ["Bedrock (Custom)"],
+    order: -1,
+  },
+  "anthropic.claude-3-5-sonnet-20240620-v1:0": {
+    encoding: "r50k_base",
+    prices: {
+      prompt: 0.0004,
+      completion: 0.0004,
+    },
+    maxTokens: 2049,
+    llm: ["Bedrock (Custom)"],
+    order: -1,
+  },
+  "cohere.command-text-v14": {
+    encoding: "r50k_base",
+    prices: {
+      prompt: 0.0004,
+      completion: 0.0004,
+    },
+    maxTokens: 2049,
+    llm: ["Bedrock (Custom)"],
+    order: -1,
+  },
+  "cohere.command-r-v1:0": {
+    encoding: "r50k_base",
+    prices: {
+      prompt: 0.0004,
+      completion: 0.0004,
+    },
+    maxTokens: 2049,
+    llm: ["Bedrock (Custom)"],
+    order: -1,
+  },
+  "cohere.command-r-plus-v1:0": {
+    encoding: "r50k_base",
+    prices: {
+      prompt: 0.0004,
+      completion: 0.0004,
+    },
+    maxTokens: 2049,
+    llm: ["Bedrock (Custom)"],
+    order: -1,
+  },
+  "cohere.command-light-text-v14": {
+    encoding: "r50k_base",
+    prices: {
+      prompt: 0.0004,
+      completion: 0.0004,
+    },
+    maxTokens: 2049,
+    llm: ["Bedrock (Custom)"],
+    order: -1,
+  },
+  "meta.llama3-8b-instruct-v1:0": {
+    encoding: "r50k_base",
+    prices: {
+      prompt: 0.0004,
+      completion: 0.0004,
+    },
+    maxTokens: 2049,
+    llm: ["Bedrock (Custom)"],
+    order: -1,
+  },
+  "meta.llama3-70b-instruct-v1:0": {
+    encoding: "r50k_base",
+    prices: {
+      prompt: 0.0004,
+      completion: 0.0004,
+    },
+    maxTokens: 2049,
+    llm: ["Bedrock (Custom)"],
+    order: -1,
+  },
+  "mistral.mistral-7b-instruct-v0:2": {
+    encoding: "r50k_base",
+    prices: {
+      prompt: 0.0004,
+      completion: 0.0004,
+    },
+    maxTokens: 2049,
+    llm: ["Bedrock (Custom)"],
+    order: -1,
+  },
+  "mistral.mixtral-8x7b-instruct-v0:1": {
+    encoding: "r50k_base",
+    prices: {
+      prompt: 0.0004,
+      completion: 0.0004,
+    },
+    maxTokens: 2049,
+    llm: ["Bedrock (Custom)"],
+    order: -1,
+  },
+  "mistral.mistral-large-2402-v1:0": {
+    encoding: "r50k_base",
+    prices: {
+      prompt: 0.0004,
+      completion: 0.0004,
+    },
+    maxTokens: 2049,
+    llm: ["Bedrock (Custom)"],
+    order: -1,
+  },
+  "mistral.mistral-small-2402-v1:0": {
+    encoding: "r50k_base",
+    prices: {
+      prompt: 0.0004,
+      completion: 0.0004,
+    },
+    maxTokens: 2049,
+    llm: ["Bedrock (Custom)"],
+    order: -1,
   },
 };
 
