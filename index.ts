@@ -576,6 +576,36 @@ const AI_MODELS: Record<string, ModelType> = {
     llm: ["Bedrock (Custom)"],
     order: -1,
   },
+  "stability.stable-image-core-v1:0": {
+    encoding: "r50k_base",
+    prices: {
+      prompt: 0.0004,
+      completion: 0.0004,
+    },
+    maxTokens: 2049,
+    llm: ["Bedrock (Custom)"],
+    order: -1,
+  },
+  "stability.sd3-large-v1:0": {
+    encoding: "r50k_base",
+    prices: {
+      prompt: 0.0004,
+      completion: 0.0004,
+    },
+    maxTokens: 2049,
+    llm: ["Bedrock (Custom)"],
+    order: -1,
+  },
+  "stability.stable-image-ultra-v1:0": {
+    encoding: "r50k_base",
+    prices: {
+      prompt: 0.0004,
+      completion: 0.0004,
+    },
+    maxTokens: 2049,
+    llm: ["Bedrock (Custom)"],
+    order: -1,
+  },
   "amazon.titan-image-generator-v2:0": {
     encoding: "r50k_base",
     prices: {
