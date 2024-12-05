@@ -1,18 +1,23 @@
 import type { LLMProviderType } from "../types";
+import { Models } from "@mirai73/bedrock-fm";
 
 export interface ModelType {
-  encoding: string;
+  encoding?: string;
   prices: {
-    prompt: number;
-    completion: number;
+    prompt?: number;
+    completion?: number;
+    image?: number;
+    video?: number;
+    audio?: number;
   };
   maxTokens: number;
   llm: LLMProviderType[];
   order?: number;
-  inputOptions?: InputOptions;
+  inputOptions?: ContentOptions;
+  outputOptions?: ContentOptions;
 }
 
-export interface InputOptions {
+export interface ContentOptions {
   images?: boolean;
   audio?: boolean;
   videos?: boolean;
@@ -582,6 +587,7 @@ const AI_MODELS: Record<string, ModelType> = {
       prompt: 0.0004,
       completion: 0.0004,
     },
+    outputOptions: { images: true },
     maxTokens: 2049,
     llm: ["Bedrock (Custom)"],
     order: -1,
@@ -593,26 +599,67 @@ const AI_MODELS: Record<string, ModelType> = {
       completion: 0.0004,
     },
     maxTokens: 2049,
+    outputOptions: { images: true },
     llm: ["Bedrock (Custom)"],
     order: -1,
   },
   "stability.stable-image-ultra-v1:0": {
-    encoding: "r50k_base",
     prices: {
       prompt: 0.0004,
       completion: 0.0004,
     },
     maxTokens: 2049,
+    outputOptions: { images: true },
     llm: ["Bedrock (Custom)"],
     order: -1,
   },
-  "amazon.titan-image-generator-v2:0": {
-    encoding: "r50k_base",
+  "amazon.nova-lite-v1:0": {
     prices: {
       prompt: 0.0004,
       completion: 0.0004,
     },
     maxTokens: 2049,
+    inputOptions: { text: true, images: true, videos: true },
+    llm: ["Bedrock (Custom)"],
+    order: -1,
+  },
+  "amazon.nova-micro-v1:0": {
+    prices: {
+      prompt: 0.0004,
+      completion: 0.0004,
+    },
+    maxTokens: 2049,
+    inputOptions: { text: true, images: true, videos: true },
+    llm: ["Bedrock (Custom)"],
+    order: -1,
+  },
+  "amazon.nova-pro-v1:0": {
+    prices: {
+      prompt: 0.0004,
+      completion: 0.0004,
+    },
+    maxTokens: 2049,
+    inputOptions: { text: true, images: true, videos: true },
+    llm: ["Bedrock (Custom)"],
+    order: -1,
+  },
+  "amazon.nova-canvas-v1:0": {
+    prices: {
+      prompt: 0.0004,
+      completion: 0.0004,
+    },
+    maxTokens: 2049,
+    outputOptions: { images: true },
+    llm: ["Bedrock (Custom)"],
+    order: -1,
+  },
+  "amazon.nova-reel-v1:0": {
+    prices: {
+      prompt: 0.0004,
+      completion: 0.0004,
+    },
+    maxTokens: 2049,
+    outputOptions: { videos: true },
     llm: ["Bedrock (Custom)"],
     order: -1,
   },
